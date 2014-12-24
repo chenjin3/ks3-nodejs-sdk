@@ -1,10 +1,6 @@
 #KS3 SDK For Node.js使用指南
 ---
 
-##SDK下载地址
-* 下载地址：[https://github.com/StoneRen/ks3-node-sdk.git](https://github.com/StoneRen/ks3-node-sdk.git)
-* 主要提供[`KS3 nodejs SDK`](#ks3-nodejs-sdk说明)和[`命令行工具`](#命令行工具说明)
-
 ## KS3 nodejs SDK说明
 ###概述
 该SDK为NodeJs开发者提供使用金山云存储服务的入口，基于金山云存储官方API构建。使用该SDK将数据安全的存储到金山云存储上会变得非常的便捷。   
