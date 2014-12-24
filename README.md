@@ -5,7 +5,7 @@ SDK主要包含以下几个方面：
 * bucket相关操作；
 * object相关操作；
 * 上传下载操作（包括大文件的分块上传下载操作）；
-* [命令行工具](#命令行工具)（主要针对大文件的上传和下载提供断点续传）。
+* [命令行工具](#user-content-命令行工具)（主要针对大文件的上传和下载提供断点续传）。
 
 ###快速入门
 开发前准备：   
@@ -19,7 +19,7 @@ npm install ks3
 ```
 或者将代码下载到你本地：
 ```
-git clone https://github.com/StoneRen/ks3-node-sdk.git
+git clone git@github.com:ks3sdk/ks3-nodejs-sdk.git
 ```
 
 2、运行：   
@@ -37,14 +37,14 @@ ks3.bucket.put({Bucket: 'mybucket'}, function() {
 
 ####方法摘要
 * **bucket：对Bucket的所有相关操作，包含以下可调用方法：**
-    - [Create Bucket](#create-bucket:) : 创建一个新的Bucket   
-    - [Delete Bucket](#delete-bucket:) : 删除指定Bucket     
-    - [list Objects](#list-objects:) : 枚举Bucket内的Object   
-    - [Head Bucket](#head-bucket:) : 验证指定的Bucket是否存在     
-    - [GET Bucket ACL](#get-bucket-acl:) : 获取Bucket的ACL(有关ACL请参阅[官方文档](http://doc.ksyun.com/doc/api/index.html#service))   
-    - [PUT Bucket ACL](#put-bucket-acl:) : 设置Bucket的ACL  
-    - [GET Bucket Logging](#get-bucket-logging:) : 获取Bucket的日志信息   
-    - [PUT Bucket Logging](#put-bucket-logging:) : 设置Bucket的日志信息
+    - [Create Bucket](#create-bucket) : 创建一个新的Bucket   
+    - [Delete Bucket](#delete-bucket) : 删除指定Bucket     
+    - [list Objects](#list-objects) : 枚举Bucket内的Object   
+    - [Head Bucket](#head-bucket) : 验证指定的Bucket是否存在     
+    - [GET Bucket ACL](#get-bucket-acl) : 获取Bucket的ACL(有关ACL请参阅[官方文档](http://doc.ksyun.com/doc/api/index.html#service))   
+    - [PUT Bucket ACL](#put-bucket-acl) : 设置Bucket的ACL  
+    - [GET Bucket Logging](#get-bucket-logging) : 获取Bucket的日志信息   
+    - [PUT Bucket Logging](#put-bucket-logging) : 设置Bucket的日志信息
     - [GET Service](#get-service) : 列出用户所有的Bucket信息(名称、创建时间、所有者)
 
 
