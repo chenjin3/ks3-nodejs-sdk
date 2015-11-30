@@ -125,7 +125,9 @@ function init(options) {
 				}
 			});
 			if ( !! nconf.get('AK')) {
-				process.stdin.emit('data', nconf.get('AK'));
+				try{
+					process.stdin.emit('data', nconf.get('AK'));
+				} catch(e){}
 			}
 		} else {
 			callback(null, akStr)
@@ -147,7 +149,9 @@ function init(options) {
 				}
 			});
 			if ( !! nconf.get('SK')) {
-				process.stdin.emit('data', nconf.get('SK'));
+				try{
+					process.stdin.emit('data', nconf.get('SK'));
+				} catch (e){}
 			}
 		} else {
 			callback(null, skStr)
@@ -169,7 +173,9 @@ function init(options) {
 				}
 			});
 			if ( !! nconf.get('BUCKET')) {
-				process.stdin.emit('data', nconf.get('BUCKET'));
+				try{
+					process.stdin.emit('data', nconf.get('BUCKET'));
+				} catch (e){}
 			}
 		} else {
 			callback(null, bucketStr)
@@ -242,7 +248,9 @@ function upload(options) {
 			}
 		});
 		if ( !! nconf.get('PATH')) {
-			process.stdin.emit('data', nconf.get('PATH'));
+			try{
+				process.stdin.emit('data', nconf.get('PATH'));
+			} catch(e){}
 		}
 	} else {
 		async.series([function(callback) {
@@ -262,7 +270,9 @@ function upload(options) {
 					}
 				});
 				if ( !! nconf.get('BUCKET')) {
-					process.stdin.emit('data', nconf.get('BUCKET'));
+					try{
+						process.stdin.emit('data', nconf.get('BUCKET'));
+					} catch(e){}
 				}
 			} else {
 				callback(null, bucketStr);
@@ -286,7 +296,9 @@ function upload(options) {
 				});
 
 				if ( !! nconf.get('KEY')) {
-					process.stdin.emit('data', nconf.get('KEY'));
+					try{
+						process.stdin.emit('data', nconf.get('KEY'));
+					} catch(e){}
 				}
 			} else {
 				callback(null, keyStr);
